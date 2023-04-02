@@ -47,6 +47,7 @@ public class Insurance_policy {
     private List<Claim> claims;
 
 
+
     public Insurance_policy(int policy_no, Insurance_type insurance_type, int coverage_amount, int premium, Date start_date, Date end_date) {
         this.policy_no = policy_no;
         this.insurance_type = insurance_type;
