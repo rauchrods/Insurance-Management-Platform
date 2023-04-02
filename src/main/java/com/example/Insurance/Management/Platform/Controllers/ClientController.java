@@ -29,16 +29,14 @@ public class ClientController {
     @GetMapping("getall")
     public ResponseEntity<List<Client>> getAllClients() {
         List<Client> clients = clientService.getAllClients();
-        try {
-            if (clients == null) {
-                throw new Exception("No Clients present list is empty");
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+
+        if (clients == null) {
             return new ResponseEntity<>(clients, HttpStatus.NOT_FOUND);
+        } else {
+            return new ResponseEntity<>(clients, HttpStatus.ACCEPTED);
+
         }
 
-        return new ResponseEntity<>(clients, HttpStatus.ACCEPTED);
     }
 
     @GetMapping("getclientbyid")

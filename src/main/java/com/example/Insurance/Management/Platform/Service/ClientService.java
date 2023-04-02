@@ -32,7 +32,14 @@ public class ClientService {
 
     public List<Client> getAllClients() {
 
-        List<Client> clients = clientRepository.findAll();
+        List<Client> clients =null;
+
+        try{
+             clients = clientRepository.findAll();
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
         return clients;
     }
