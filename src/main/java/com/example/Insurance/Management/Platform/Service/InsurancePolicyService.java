@@ -97,6 +97,7 @@ public class InsurancePolicyService {
             return "insurance policy not found";
         }
 
+
         insurance_policy.setPolicy_no(insurancePolicyRequestDto.getPolicy_no());
         insurance_policy.setInsurance_type(insurancePolicyRequestDto.getInsurance_type());
         insurance_policy.setCoverage_amount(insurancePolicyRequestDto.getCoverage_amount());
